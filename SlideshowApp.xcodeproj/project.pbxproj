@@ -15,8 +15,6 @@
 		F1BFC8E62079E24800DCA0AE /* SlideshowAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BFC8E52079E24800DCA0AE /* SlideshowAppTests.swift */; };
 		F1BFC8F12079E24800DCA0AE /* SlideshowAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BFC8F02079E24800DCA0AE /* SlideshowAppUITests.swift */; };
 		F1BFC8FF2079F77A00DCA0AE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BFC8FE2079F77A00DCA0AE /* ResultViewController.swift */; };
-		F1BFC901207A074B00DCA0AE /* SlideshowAppTests in Resources */ = {isa = PBXBuildFile; fileRef = F1BFC900207A074A00DCA0AE /* SlideshowAppTests */; };
-		F1BFC903207A083000DCA0AE /* SlideshowApp in Resources */ = {isa = PBXBuildFile; fileRef = F1BFC902207A082F00DCA0AE /* SlideshowApp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +49,6 @@
 		F1BFC8F02079E24800DCA0AE /* SlideshowAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideshowAppUITests.swift; sourceTree = "<group>"; };
 		F1BFC8F22079E24800DCA0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1BFC8FE2079F77A00DCA0AE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		F1BFC900207A074A00DCA0AE /* SlideshowAppTests */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SlideshowAppTests; sourceTree = "<group>"; };
-		F1BFC902207A082F00DCA0AE /* SlideshowApp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SlideshowApp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +103,6 @@
 				F1BFC8D22079E24500DCA0AE /* ViewController.swift */,
 				F1BFC8D42079E24500DCA0AE /* Main.storyboard */,
 				F1BFC8FE2079F77A00DCA0AE /* ResultViewController.swift */,
-				F1BFC902207A082F00DCA0AE /* SlideshowApp */,
 				F1BFC8D72079E24800DCA0AE /* Assets.xcassets */,
 				F1BFC8D92079E24800DCA0AE /* LaunchScreen.storyboard */,
 				F1BFC8DC2079E24800DCA0AE /* Info.plist */,
@@ -119,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				F1BFC8E52079E24800DCA0AE /* SlideshowAppTests.swift */,
-				F1BFC900207A074A00DCA0AE /* SlideshowAppTests */,
 				F1BFC8E72079E24800DCA0AE /* Info.plist */,
 			);
 			path = SlideshowAppTests;
@@ -241,7 +235,6 @@
 				F1BFC8DB2079E24800DCA0AE /* LaunchScreen.storyboard in Resources */,
 				F1BFC8D82079E24800DCA0AE /* Assets.xcassets in Resources */,
 				F1BFC8D62079E24500DCA0AE /* Main.storyboard in Resources */,
-				F1BFC903207A083000DCA0AE /* SlideshowApp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +242,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BFC901207A074B00DCA0AE /* SlideshowAppTests in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

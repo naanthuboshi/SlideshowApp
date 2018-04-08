@@ -18,7 +18,8 @@ class ViewController: UIViewController
     var timer: Timer?
     
     @IBAction func playAction(_ sender: UIButton) {
-        timer = Timer.scheduledTimer(timeInterval:2.0,
+        if timer == nil {
+            timer = Timer.scheduledTimer(timeInterval:2.0,
                                      target:self,
                                      selector: #selector(onTimer(timer:)),
                                      userInfo:nil,
@@ -41,15 +42,11 @@ class ViewController: UIViewController
     
     }
 
-
-
-
- func onTimer(timer: Timer) {
-    @objc func onTimer(time: Timer) {
+    @objc func onTimer(timer: Timer) {
         print("on Timer")
 }
 
-    overrride func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
