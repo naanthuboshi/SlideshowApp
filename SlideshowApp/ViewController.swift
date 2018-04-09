@@ -34,6 +34,7 @@ class ViewController: UIViewController
     @IBAction func goAction(_ sender: UIButton) {
         index += 1
         let  image = UIImage(named :imageArray[index] )
+        imageView.image = image
     }
     
     @IBAction func backAction(_ sender: UIButton) {
@@ -41,12 +42,13 @@ class ViewController: UIViewController
         let  image = UIImage(named :imageArray[index] )
     
     }
-
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        
+    }
     @objc func onTimer(timer: Timer) {
         print("on Timer")
 }
 
-class ViewController: UIViewController ,UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,16 +57,16 @@ class ViewController: UIViewController ,UIGestureRecognizerDelegate {
         print("viewDidLoad")
         let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
         target: self,
-        action: #selector (ViewController.tapped(_:))
+        action: #selector (ViewController.tapped(_:)))
+        imageView.addGestureRecognizer(tapGesture)
+         imageView.isUserInteractionEnabled = true
         
-        tapGesture.delegate = self
-        
-        self.view.addGestureRecognizer(tapGesture)
     }
     
     @objc func tapped(_ sender: UITapGestureRecognizer){
     if sender.state == .ended{
     print("タップ")
+        performSegue(withIdentifier: "resutlSegue",sender:nil)
        }
     }
 override func didReceiveMemoryWarning() {
