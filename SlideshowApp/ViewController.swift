@@ -32,20 +32,21 @@ class ViewController: UIViewController
     }
 
     @IBAction func goAction(_ sender: UIButton) {
-        if index < 0{
-            index = 2
+        index += 1//追加
+        if index < 2{
+            index = 0
         }
         let  image = UIImage(named :imageArray[index] )
         imageView.image = image
     }
     
     @IBAction func backAction(_ sender: UIButton) {
-        if index > 1{
+        index -= 1//追加
+        if index < 0{
            index = 2
-           index = 0
         }
         let  image = UIImage(named :imageArray[index] )
-    
+    imageView.image = image//追加
     }
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         
