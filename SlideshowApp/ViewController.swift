@@ -46,16 +46,33 @@ class ViewController: UIViewController
         print("on Timer")
 }
 
+class ViewController: UIViewController ,UIGestureRecognizerDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
+        print("viewDidLoad")
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
+        target: self,
+        action: #selector (ViewController.tapped(_:))
+        
+        tapGesture.delegate = self
+        
+        self.view.addGestureRecognizer(tapGesture)
     }
-
+    
+    @objc func tapped(_ sender: UITapGestureRecognizer){
+    if sender.state == .ended{
+    print("タップ")
+       }
+    }
 override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 }
+
 
 
 
