@@ -32,13 +32,18 @@ class ViewController: UIViewController
     }
 
     @IBAction func goAction(_ sender: UIButton) {
-        index += 1
+        if index < 0{
+            index = 2
+        }
         let  image = UIImage(named :imageArray[index] )
         imageView.image = image
     }
     
     @IBAction func backAction(_ sender: UIButton) {
-        index -= 1
+        if index > 1{
+           index = 2
+           index = 0
+        }
         let  image = UIImage(named :imageArray[index] )
     
     }
