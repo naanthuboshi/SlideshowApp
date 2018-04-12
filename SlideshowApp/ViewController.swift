@@ -11,12 +11,15 @@ import UIKit
 class ViewController: UIViewController
 {
     
+   
+   
     @IBOutlet weak var imageView: UIImageView!
     
     let imageArray = ["dance_yorokobi_mai_man","dance_yorokobi_mai_woman","money_10000"]
     var index = 0
     var timer: Timer?
     
+   
     @IBAction func playAction(_ sender: UIButton) {
         if timer == nil {
             timer = Timer.scheduledTimer(timeInterval:2.0,
@@ -61,11 +64,17 @@ class ViewController: UIViewController
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        print("viewDidLoad")
+        
+       
     }
+    @IBAction func tapView(_ sender: Any) {
+        print("viewDidLoad")
+        
     
-
-    
+}
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        
+    }
     @objc func tapped(_ sender: UITapGestureRecognizer){
     if sender.state == .ended{
     print("タップ")
