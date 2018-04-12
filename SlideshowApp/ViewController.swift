@@ -18,7 +18,7 @@ class ViewController: UIViewController
     let imageArray = ["dance_yorokobi_mai_man","dance_yorokobi_mai_woman","money_10000"]
     var index = 0
     var timer: Timer?
-    
+
    
     @IBAction func playAction(_ sender: UIButton) {
         if timer == nil {
@@ -36,7 +36,7 @@ class ViewController: UIViewController
 
     @IBAction func goAction(_ sender: UIButton) {
         index += 1//追加
-        if index < 2{
+        if index > 2{
             index = 0
         }
         let  image = UIImage(named :imageArray[index] )
@@ -54,9 +54,20 @@ class ViewController: UIViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         resultViewController.imageName = imageArray[index]
-    };
+    
+
+          if timer != nil{
+            
+        } };
     @objc func onTimer(timer: Timer) {
+        index += 1//追加
+        if index > 2{
+            index = 0
+        }
+        let  image = UIImage(named :imageArray[index] )
+        imageView.image = image
         print("on Timer")
+        
 }
 
     

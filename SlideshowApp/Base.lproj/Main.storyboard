@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -74,7 +74,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="rb7-qN-Mhx">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="twK-dj-YyL"/>
+                        <segue destination="ose-Uu-Qee" kind="show" id="azH-HR-Eq6"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -89,30 +89,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tQ-ZN-EcH">
-                                <rect key="frame" x="172" y="584" width="31" height="30"/>
+                                <rect key="frame" x="172" y="617" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="EU2-Mu-AwZ"/>
+                                    <segue destination="CdS-Ba-uYg" kind="unwind" unwindAction="unwind:" id="1VN-R5-ksi"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Sj-JD-lNR">
-                                <rect key="frame" x="16" y="126" width="343" height="128"/>
+                                <rect key="frame" x="16" y="80" width="343" height="507"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="GHi-U8-YLJ"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="331" id="GKY-eo-bEx"/>
-                                    <constraint firstAttribute="width" constant="343" id="Jj9-Fw-Xlw"/>
-                                    <constraint firstAttribute="height" constant="128" id="gKG-MZ-GFd"/>
+                                    <constraint firstAttribute="width" constant="343" id="kBZ-uG-L05"/>
+                                    <constraint firstAttribute="width" secondItem="8Sj-JD-lNR" secondAttribute="height" multiplier="343:507" id="yZc-Ea-QOU"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8Sj-JD-lNR" firstAttribute="centerX" secondItem="0MV-JE-Ki3" secondAttribute="centerX" id="8WA-Oi-zFw"/>
-                            <constraint firstItem="dK0-cZ-VS6" firstAttribute="bottom" secondItem="6tQ-ZN-EcH" secondAttribute="bottom" constant="53" id="SmL-DH-oQV"/>
-                            <constraint firstItem="8Sj-JD-lNR" firstAttribute="top" secondItem="dK0-cZ-VS6" secondAttribute="top" constant="106" id="cpc-4J-jx8"/>
-                            <constraint firstItem="8Sj-JD-lNR" firstAttribute="centerX" secondItem="0MV-JE-Ki3" secondAttribute="centerX" id="eEP-96-pc1"/>
-                            <constraint firstItem="6tQ-ZN-EcH" firstAttribute="centerX" secondItem="0MV-JE-Ki3" secondAttribute="centerX" id="kGp-LP-VYg"/>
-                            <constraint firstItem="8Sj-JD-lNR" firstAttribute="leading" secondItem="0MV-JE-Ki3" secondAttribute="leadingMargin" id="lGE-rM-vst"/>
+                            <constraint firstAttribute="bottom" secondItem="6tQ-ZN-EcH" secondAttribute="bottom" constant="20" symbolic="YES" id="IXn-Mq-azA"/>
+                            <constraint firstItem="8Sj-JD-lNR" firstAttribute="centerX" secondItem="0MV-JE-Ki3" secondAttribute="centerX" id="cci-8r-uQW"/>
+                            <constraint firstItem="8Sj-JD-lNR" firstAttribute="centerY" secondItem="0MV-JE-Ki3" secondAttribute="centerY" id="eyr-82-Yyq"/>
+                            <constraint firstItem="6tQ-ZN-EcH" firstAttribute="centerX" secondItem="0MV-JE-Ki3" secondAttribute="centerX" id="qfC-81-uMR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dK0-cZ-VS6"/>
                     </view>
@@ -121,6 +117,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4c-eW-oad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CdS-Ba-uYg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="119.1904047976012"/>
         </scene>
@@ -128,4 +125,7 @@
     <resources>
         <image name="dance_yorokobi_mai_woman" width="180" height="180"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="azH-HR-Eq6"/>
+    </inferredMetricsTieBreakers>
 </document>
