@@ -48,9 +48,10 @@ class ViewController: UIViewController
         let  image = UIImage(named :imageArray[index] )
     imageView.image = image//追加
     }
-    @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        
-    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        resultViewController.imageName = imageArray[index]
+    };
     @objc func onTimer(timer: Timer) {
         print("on Timer")
 }
@@ -61,13 +62,9 @@ class ViewController: UIViewController
         
         // Do any additional setup after loading the view, typically from a nib.
         print("viewDidLoad")
-        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
-        target: self,
-        action: #selector (ViewController.tapped(_:)))
-        imageView.addGestureRecognizer(tapGesture)
-         imageView.isUserInteractionEnabled = true
-        
     }
+    
+
     
     @objc func tapped(_ sender: UITapGestureRecognizer){
     if sender.state == .ended{

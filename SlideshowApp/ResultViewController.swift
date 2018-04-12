@@ -11,13 +11,12 @@ import UIKit
 class ResultViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-   
+    var imageName = "dance_yorokobi_mai_man"
+    
     override func viewDidLoad() {
-        let image = UIImage(named :"dance_yorokobi_mai_man")
-        imageView.image = image
         super.viewDidLoad()
+        imageView.image = UIImage(named: imageName)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
