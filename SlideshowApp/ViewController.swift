@@ -11,10 +11,20 @@ import UIKit
 class ViewController: UIViewController
 {
     
-   
-   
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var play: UIButton!
     
+    
+    
+    @IBOutlet weak var go: UIButton!
+    
+    
+
+    @IBOutlet weak var back: UIButton!
+    
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
+   
     let imageArray = ["dance_yorokobi_mai_man","dance_yorokobi_mai_woman","money_10000"]
     var index = 0
     var timer: Timer?
@@ -27,10 +37,15 @@ class ViewController: UIViewController
                                      selector: #selector(onTimer(timer:)),
                                      userInfo:nil,
                                      repeats:true)
+            
+            //「進む」「戻る」ボタンを無効化
+            //「再生」->「停止」にタイトル変更
                   }
     else {
     timer?.invalidate()
     timer = nil
+            //「進む」「戻る」ボタンを有効化
+            //「停止」->「再生」タイトル変更
     }
     }
 
@@ -41,6 +56,8 @@ class ViewController: UIViewController
         }
         let  image = UIImage(named :imageArray[index] )
         imageView.image = image
+        
+        
     }
     
     @IBAction func backAction(_ sender: UIButton) {
@@ -54,12 +71,14 @@ class ViewController: UIViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         resultViewController.imageName = imageArray[index]
-    
-
+        
           if timer != nil{
-            
-        } };
-    @objc func onTimer(timer: Timer) {
+           timer?.invalidate()
+            timer = nil//「進む」「戻る」ボタンを有効化
+                       //「停止」->「再生」にタイトル変更
+        }
+    }
+            @objc func onTimer(timer: Timer) {
         index += 1//追加
         if index > 2{
             index = 0
@@ -73,7 +92,7 @@ class ViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         // Do any additional setup after loading the view, typically from a nib.
         
        

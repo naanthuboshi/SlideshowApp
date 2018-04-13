@@ -14,6 +14,12 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rb7-qN-Mhx">
+                    <connections>
+                        <segue destination="ose-Uu-Qee" kind="show" id="azH-HR-Eq6"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -67,18 +73,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="back" destination="cYr-Wg-lVe" id="f26-wF-ZTh"/>
+                        <outlet property="go" destination="S04-P3-qse" id="2qQ-em-IiB"/>
                         <outlet property="imageView" destination="UGC-0E-fsj" id="OdT-fJ-zmK"/>
+                        <outlet property="play" destination="R4M-NY-V0r" id="2PL-dD-c5V"/>
                         <segue destination="ose-Uu-Qee" kind="show" identifier="ResultViewController" id="FEY-aQ-lPw"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="rb7-qN-Mhx">
-                    <connections>
-                        <segue destination="ose-Uu-Qee" kind="show" id="azH-HR-Eq6"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="140" y="119"/>
+            <point key="canvasLocation" x="140" y="118.29085457271366"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Eth-ny-aMZ">
@@ -126,6 +129,6 @@
         <image name="dance_yorokobi_mai_woman" width="180" height="180"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="azH-HR-Eq6"/>
+        <segue reference="FEY-aQ-lPw"/>
     </inferredMetricsTieBreakers>
 </document>
