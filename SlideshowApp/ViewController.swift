@@ -12,13 +12,7 @@ class ViewController: UIViewController
 {
     
     @IBOutlet weak var play: UIButton!
-    
-    
-    
     @IBOutlet weak var go: UIButton!
-    
-    
-
     @IBOutlet weak var back: UIButton!
     
     
@@ -38,15 +32,17 @@ class ViewController: UIViewController
                                      userInfo:nil,
                                      repeats:true)
             
-            //「進む」「戻る」ボタンを無効化
-            //「再生」->「停止」にタイトル変更
+          go.isEnabled = false//「進む」「戻る」ボタンを無効にする
+          back.isEnabled = false//「停止」->「再生」タイトル変更
+            play.setTitle("停止",  for: .normal)
                   }
     else {
     timer?.invalidate()
     timer = nil
-            //「進む」「戻る」ボタンを有効化
-            //「停止」->「再生」タイトル変更
-    }
+            go.isEnabled = true//「進む」「戻る」ボタンを有効にする
+            back.isEnabled = true//「停止」->「再生」にタイトル変更
+            play.setTitle("再生", for: .normal)
+        }
     }
 
     @IBAction func goAction(_ sender: UIButton) {
@@ -74,8 +70,9 @@ class ViewController: UIViewController
         
           if timer != nil{
            timer?.invalidate()
-            timer = nil//「進む」「戻る」ボタンを有効化
-                       //「停止」->「再生」にタイトル変更
+            timer = nil
+                  go.isEnabled = true//「進む」「戻る」ボタンを有効にする
+                  back.isEnabled = true//「停止」->「再生」にタイトル変更
         }
     }
             @objc func onTimer(timer: Timer) {
@@ -92,8 +89,8 @@ class ViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        // Do any additional setup after loading the view, typically from a nib.
+      
+            // Do any additional setup after loading the view, typically from a nib.
         
        
     }
