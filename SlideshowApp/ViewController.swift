@@ -68,11 +68,13 @@ class ViewController: UIViewController
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         resultViewController.imageName = imageArray[index]
         
-          if timer != nil{
+    
+            if timer != nil{
            timer?.invalidate()
             timer = nil
                   go.isEnabled = true//「進む」「戻る」ボタンを有効にする
                   back.isEnabled = true//「停止」->「再生」にタイトル変更
+            play.setTitle("再生", for: .normal)
         }
     }
             @objc func onTimer(timer: Timer) {
